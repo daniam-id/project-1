@@ -1,65 +1,88 @@
 <!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+  </head>
+  <body class="bg-white text-gray-800 font-sans min-h-screen flex flex-col">
+    <!-- Header Sederhana -->
+    <header class="flex justify-end p-4 gap-4 text-sm items-center">
+      <a href="#" class="hover:underline">Gmail</a>
+      <a href="#" class="hover:underline">Images</a>
+      <button
+        class="bg-blue-600 text-white px-6 py-2 rounded font-medium hover:bg-blue-700 transition"
+      >
+        Login
+      </button>
+    </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Google</title>
-</head>
+    <!-- Bagian Utama -->
+    <main class="flex-grow flex flex-col items-center justify-center -mt-20">
+      <!-- Logo Sederhana -->
+      <img
+        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        alt="Google"
+        class="w-64 mb-8"
+      />
 
-<body class="bg-white text-gray-800 font-sans min-h-screen flex flex-col">
-  <!-- Header Sederhana -->
-  <header class="flex justify-end p-4 gap-4 text-sm items-center">
-    <a href="#" class="hover:underline">Gmail</a>
-    <a href="#" class="hover:underline">Images</a>
-    <button class="bg-blue-600 text-white px-6 py-2 rounded font-medium hover:bg-blue-700 transition">
-      Login
-    </button>
-  </header>
+      <!-- Form Pencarian (Murni HTML) -->
+      <form
+        action="https://www.google.com/search"
+        method="GET"
+        class="w-full max-w-xl px-4"
+      >
+        <!-- Kotak Input -->
+        <div
+          class="flex items-center border border-gray-200 hover:shadow-md rounded-full px-4 py-3 transition-shadow"
+        >
+          <span class="text-gray-400 mr-2">🔍</span>
 
-  <!-- Bagian Utama -->
-  <main class="flex-grow flex flex-col items-center justify-center -mt-20">
-    <!-- Logo Sederhana -->
-    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google"
-      class="w-64 mb-8" />
+          <!-- Atribut name="q" dipakai oleh Google untuk membaca kata kunci pencarian -->
+          <input
+            type="text"
+            name="q"
+            class="flex-grow outline-none text-base"
+            placeholder="Cari di Google..."
+            required
+            autofocus
+          />
+        </div>
 
-    <!-- Form Pencarian (Murni HTML) -->
-    <form action="https://www.google.com/search" method="GET" class="w-full max-w-xl px-4">
-      <!-- Kotak Input -->
-      <div class="flex items-center border border-gray-200 hover:shadow-md rounded-full px-4 py-3 transition-shadow">
-        <span class="text-gray-400 mr-2">🔍</span>
+        <!-- Tombol -->
+        <div class="flex justify-center gap-4 mt-8">
+          <button
+            type="submit"
+            class="bg-gray-50 text-gray-700 border border-gray-50 hover:border-gray-200 px-4 py-2 rounded text-sm transition-all"
+          >
+            Google Search
+          </button>
+          <button
+            type="button"
+            id="btnLucky"
+            class="bg-gray-50 text-gray-700 border border-gray-50 hover:border-gray-200 px-4 py-2 rounded text-sm transition-all"
+          >
+            I'm Feeling Lucky
+          </button>
+        </div>
+      </form>
 
-        <!-- Atribut name="q" dipakai oleh Google untuk membaca kata kunci pencarian -->
-        <input type="text" name="q" class="flex-grow outline-none text-base" placeholder="Cari di Google..." required
-          autofocus />
+      <!-- Informasi Bahasa -->
+      <div class="mt-6 text-sm text-gray-600">
+        Google offered in:
+        <a href="#" class="text-blue-700 hover:underline mx-1"
+          >Bahasa Indonesia</a
+        >
       </div>
+    </main>
 
-      <!-- Tombol -->
-      <div class="flex justify-center gap-4 mt-8">
-        <button type="submit"
-          class="bg-gray-50 text-gray-700 border border-gray-50 hover:border-gray-200 px-4 py-2 rounded text-sm transition-all">
-          Google Search
-        </button>
-        <button type="button" id="btnLucky"
-          class="bg-gray-50 text-gray-700 border border-gray-50 hover:border-gray-200 px-4 py-2 rounded text-sm transition-all">
-          I'm Feeling Lucky
-        </button>
-      </div>
-    </form>
+    <!-- Footer Sederhana -->
+    <footer
+      class="bg-gray-100 text-gray-500 text-sm p-4 text-center mt-auto border-t border-gray-200"
+    >
+      <p>Indonesia &copy; 2026. DevAgency Masterclass.</p>
+    </footer>
 
-    <!-- Informasi Bahasa -->
-    <div class="mt-6 text-sm text-gray-600">
-      Google offered in:
-      <a href="#" class="text-blue-700 hover:underline mx-1">Bahasa Indonesia</a>
-    </div>
-  </main>
-
-  <!-- Footer Sederhana -->
-  <footer class="bg-gray-100 text-gray-500 text-sm p-4 text-center mt-auto border-t border-gray-200">
-    <p>Indonesia &copy; 2026. DevAgency Masterclass.</p>
-  </footer>
-
-  <script type="module" src="/main.js"></script>
-</body>
-
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
